@@ -17,6 +17,7 @@ export const fetchRequests = () => {
 
 export const getRequests = () => {
     return applicationState.requests.map(request => ({...request}))
+    // return [...applicationState.requests]
 }
 
 const mainContainer = document.querySelector("#container");
@@ -36,4 +37,13 @@ export const sendRequest = (userServiceRequest) => {
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
         })
+}
+
+export const deleteRequest = (id) => {
+    return fetch(`${API}/requests/${id}`, { method: "DELETE" })
+        .then(
+            () => {
+                mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+            }
+        )
 }
