@@ -24,3 +24,18 @@ input {
     color: white;
     font-size: 1rem;
 }
+
+.request__delete {
+    margin: 1rem 0 2rem 2rem;
+    padding: 0.5rem;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 1rem;
+}
+
+.request_desc {
+    border: rgb(31, 102, 255) solid;
+    width: 55%;
+    padding: 12px 5px;
+    margin: 2px 0;
+}
